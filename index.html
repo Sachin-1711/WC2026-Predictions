@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en"><head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mauricia Beachcomber – FIFA World Cup 2026 Final Predictions</title>
@@ -90,15 +88,15 @@ tr:last-child td{border-bottom:none}
 
   <!-- TABS -->
   <div class="tabs">
-    <button class="tab on" onclick="showTab('form',this)">My Prediction</button>
-    <button class="tab" onclick="showTab('admin',this)">📊 Admin</button>
+    <button class="tab" onclick="showTab('form',this)">My Prediction</button>
+    <button class="tab on" onclick="showTab('admin',this)">📊 Admin</button>
   </div>
 
   <!-- ══════ FORM TAB ══════ -->
-  <div id="tab-form">
+  <div id="tab-form" style="display: none;">
     <div id="msg-area"></div>
     <div id="closed-msg"></div>
-    <div id="form-body">
+    <div id="form-body" style="display: none;">
       <div class="card">
         <div class="card-label">Your personal details</div>
         <div class="row2">
@@ -117,12 +115,12 @@ tr:last-child td{border-bottom:none}
         <div class="versus-row">
           <div class="field" style="margin-bottom:0">
             <label for="f1">Finalist 1</label>
-            <select id="f1" onchange="syncNames()"><option value="">— Select team —</option></select>
+            <select id="f1" onchange="syncNames()"><option value="">— Select team —</option><option value="Algeria">🇩🇿 Algeria</option><option value="Argentina">🇦🇷 Argentina</option><option value="Australia">🇦🇺 Australia</option><option value="Belgium">🇧🇪 Belgium</option><option value="Bosnia &amp; Herzegovina">🇧🇦 Bosnia &amp; Herzegovina</option><option value="Brazil">🇧🇷 Brazil</option><option value="Canada">🇨🇦 Canada</option><option value="Cape Verde">🇨🇻 Cape Verde</option><option value="Colombia">🇨🇴 Colombia</option><option value="Croatia">🇭🇷 Croatia</option><option value="DR Congo">🇨🇩 DR Congo</option><option value="Ecuador">🇪🇨 Ecuador</option><option value="Egypt">🇪🇬 Egypt</option><option value="England">🏴󠁧󠁢󠁥󠁮󠁧󠁿 England</option><option value="France">🇫🇷 France</option><option value="Germany">🇩🇪 Germany</option><option value="Ghana">🇬🇭 Ghana</option><option value="Ivory Coast">🇨🇮 Ivory Coast</option><option value="Japan">🇯🇵 Japan</option><option value="Mexico">🇲🇽 Mexico</option><option value="Morocco">🇲🇦 Morocco</option><option value="Netherlands">🇳🇱 Netherlands</option><option value="Norway">🇳🇴 Norway</option><option value="Paraguay">🇵🇾 Paraguay</option><option value="Portugal">🇵🇹 Portugal</option><option value="Scotland">🏴󠁧󠁢󠁳󠁣󠁴󠁿 Scotland</option><option value="Senegal">🇸🇳 Senegal</option><option value="South Africa">🇿🇦 South Africa</option><option value="Spain">🇪🇸 Spain</option><option value="Sweden">🇸🇪 Sweden</option><option value="Switzerland">🇨🇭 Switzerland</option><option value="USA">🇺🇸 USA</option></select>
           </div>
           <div class="vs-circle">VS</div>
           <div class="field" style="margin-bottom:0">
             <label for="f2">Finalist 2</label>
-            <select id="f2" onchange="syncNames()"><option value="">— Select team —</option></select>
+            <select id="f2" onchange="syncNames()"><option value="">— Select team —</option><option value="Algeria">🇩🇿 Algeria</option><option value="Argentina">🇦🇷 Argentina</option><option value="Australia">🇦🇺 Australia</option><option value="Belgium">🇧🇪 Belgium</option><option value="Bosnia &amp; Herzegovina">🇧🇦 Bosnia &amp; Herzegovina</option><option value="Brazil">🇧🇷 Brazil</option><option value="Canada">🇨🇦 Canada</option><option value="Cape Verde">🇨🇻 Cape Verde</option><option value="Colombia">🇨🇴 Colombia</option><option value="Croatia">🇭🇷 Croatia</option><option value="DR Congo">🇨🇩 DR Congo</option><option value="Ecuador">🇪🇨 Ecuador</option><option value="Egypt">🇪🇬 Egypt</option><option value="England">🏴󠁧󠁢󠁥󠁮󠁧󠁿 England</option><option value="France">🇫🇷 France</option><option value="Germany">🇩🇪 Germany</option><option value="Ghana">🇬🇭 Ghana</option><option value="Ivory Coast">🇨🇮 Ivory Coast</option><option value="Japan">🇯🇵 Japan</option><option value="Mexico">🇲🇽 Mexico</option><option value="Morocco">🇲🇦 Morocco</option><option value="Netherlands">🇳🇱 Netherlands</option><option value="Norway">🇳🇴 Norway</option><option value="Paraguay">🇵🇾 Paraguay</option><option value="Portugal">🇵🇹 Portugal</option><option value="Scotland">🏴󠁧󠁢󠁳󠁣󠁴󠁿 Scotland</option><option value="Senegal">🇸🇳 Senegal</option><option value="South Africa">🇿🇦 South Africa</option><option value="Spain">🇪🇸 Spain</option><option value="Sweden">🇸🇪 Sweden</option><option value="Switzerland">🇨🇭 Switzerland</option><option value="USA">🇺🇸 USA</option></select>
           </div>
         </div>
       </div>
@@ -130,22 +128,33 @@ tr:last-child td{border-bottom:none}
       <div class="card">
         <div class="card-label">Predict the final score</div>
         <div class="score-wrap">
-          <div class="score-team" id="sn1">Finalist 1</div>
+          <div class="score-team" id="sn1">DR Congo</div>
           <input class="score-box" id="sc1" type="number" min="0" max="20" value="1">
           <span class="score-dash">–</span>
           <input class="score-box" id="sc2" type="number" min="0" max="20" value="0">
-          <div class="score-team" id="sn2">Finalist 2</div>
+          <div class="score-team" id="sn2">Ecuador</div>
         </div>
       </div>
 
       <button class="btn-submit" id="submit-btn" onclick="submitPrediction()">Submit my prediction ⚽</button>
     </div>
-    <div id="receipt-area" style="display:none"></div>
+    <div id="receipt-area" style="display: block;">
+    <div class="alert ok">✅ Prediction submitted successfully! Note: The organiser's Google Sheet is not yet connected.</div>
+    <div class="receipt">
+      <div class="receipt-title">Your prediction summary</div>
+      <div class="receipt-row"><span class="receipt-label">Name</span><span class="receipt-value">Sachin Tooree</span></div>
+      <div class="receipt-row"><span class="receipt-label">HR code</span><span class="receipt-value">12102</span></div>
+      <div class="receipt-row"><span class="receipt-label">Finalist 1</span><span class="receipt-value">🇨🇩 DR Congo</span></div>
+      <div class="receipt-row"><span class="receipt-label">Finalist 2</span><span class="receipt-value">🇪🇨 Ecuador</span></div>
+      <div class="receipt-row"><span class="receipt-label">Predicted score</span><span class="receipt-value">1 – 0</span></div>
+      <div class="receipt-row"><span class="receipt-label">Submitted</span><span class="receipt-value">29 Jun 2026, 10:42</span></div>
+    </div>
+    <p style="font-size:12px;color:#aaa;text-align:center;margin-top:10px">Good luck! 🏆 The final is on 19 July 2026.</p></div>
   </div>
 
   <!-- ══════ ADMIN TAB ══════ -->
-  <div id="tab-admin" style="display:none">
-    <div id="pin-gate">
+  <div id="tab-admin" style="display: block;">
+    <div id="pin-gate" style="display: none;">
       <div class="card">
         <div class="card-label">Admin access</div>
         <p style="font-size:13px;color:#666;margin-bottom:14px">Enter the admin PIN to manage predictions and configure the Google Sheet.</p>
@@ -157,10 +166,10 @@ tr:last-child td{border-bottom:none}
       </div>
     </div>
 
-    <div id="admin-panel" style="display:none">
+    <div id="admin-panel" style="display: block;">
 
       <!-- GAS URL status banner -->
-      <div id="gas-status-banner"></div>
+      <div id="gas-status-banner"><div class="alert warn" style="margin-bottom:14px">⚠️ Google Sheet not connected yet. Complete Step 1 and Step 2 below, then upload the updated file to GitHub.</div></div>
 
       <!-- Google Sheet setup card -->
       <div class="setup-box">
@@ -176,7 +185,7 @@ tr:last-child td{border-bottom:none}
           <li>Click <strong>Deploy</strong> → approve all permissions → copy the <strong>Web app URL</strong></li>
           <li>Paste it in the field below → click <strong>Save &amp; embed URL</strong></li>
         </ol>
-        <textarea id="gas-script" readonly style="width:100%;height:160px;font-family:monospace;font-size:11px;border:1.5px solid #e0c060;border-radius:8px;padding:10px;background:#fffdf0;color:#333;resize:vertical;margin-top:8px">function doPost(e) {
+        <textarea id="gas-script" readonly="" style="width:100%;height:160px;font-family:monospace;font-size:11px;border:1.5px solid #e0c060;border-radius:8px;padding:10px;background:#fffdf0;color:#333;resize:vertical;margin-top:8px">function doPost(e) {
   var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
   var data = JSON.parse(e.postData.contents);
   if (sheet.getLastRow() === 0) {
@@ -206,8 +215,8 @@ function doGet() {
           <button class="btn-sm" style="background:#1a6b3c;color:#fff;border-color:#1a6b3c" onclick="saveAndEmbedURL()">💾 Save &amp; embed URL</button>
           <button class="btn-sm" onclick="testURL()">🔗 Test connection</button>
         </div>
-        <div id="gas-msg" style="margin-top:10px;font-size:13px"></div>
-        <div id="embed-instructions" style="display:none;margin-top:14px;background:#edfaf3;border:1px solid #a8ddb8;border-radius:8px;padding:12px;font-size:13px;color:#1a5a30;line-height:1.8">
+        <div id="gas-msg" style="margin-top:10px;font-size:13px"><span style="color:#1a7a40">✅ URL is reachable! Now click Save &amp; embed URL.</span></div>
+        <div id="embed-instructions" style="display: block; margin-top: 14px; background: rgb(237, 250, 243); border: 1px solid rgb(168, 221, 184); border-radius: 8px; padding: 12px; font-size: 13px; color: rgb(26, 90, 48); line-height: 1.8;">
           <strong>✅ URL saved!</strong> Now do this final step:<br>
           1. Download the updated <code>index.html</code> file shown below<br>
           2. Go to your GitHub repository<br>
@@ -222,9 +231,9 @@ function doGet() {
 
       <!-- Predictions table -->
       <div class="stats">
-        <div class="stat"><div class="stat-n" id="st-count">0</div><div class="stat-l">Local entries</div></div>
-        <div class="stat"><div class="stat-n" id="st-hr">0</div><div class="stat-l">Unique HR codes</div></div>
-        <div class="stat" style="overflow:hidden"><div class="stat-n" id="st-top" style="font-size:12px;padding-top:6px">—</div><div class="stat-l">Most picked</div></div>
+        <div class="stat"><div class="stat-n" id="st-count">1</div><div class="stat-l">Local entries</div></div>
+        <div class="stat"><div class="stat-n" id="st-hr">1</div><div class="stat-l">Unique HR codes</div></div>
+        <div class="stat" style="overflow:hidden"><div class="stat-n" id="st-top" style="font-size:12px;padding-top:6px">🇨🇩 DR Congo</div><div class="stat-l">Most picked</div></div>
       </div>
 
       <div class="card">
@@ -234,7 +243,18 @@ function doGet() {
         <div class="tbl-wrap">
           <table>
             <thead><tr><th>#</th><th>Surname</th><th>First name</th><th>HR code</th><th>Finalist 1</th><th>Finalist 2</th><th>Score</th><th>Submitted</th><th></th></tr></thead>
-            <tbody id="tbl-body"><tr><td colspan="9" class="empty-state">No predictions on this device yet.</td></tr></tbody>
+            <tbody id="tbl-body">
+    <tr>
+      <td style="color:#ccc">1</td>
+      <td><strong>Tooree</strong></td>
+      <td>Sachin</td>
+      <td><span class="tag">12102</span></td>
+      <td>🇨🇩 DR Congo</td>
+      <td>🇪🇨 Ecuador</td>
+      <td class="score-badge">1–0</td>
+      <td style="color:#bbb;font-size:11px;white-space:nowrap">29 Jun 2026, 10:42</td>
+      <td><button class="del-btn" onclick="delEntry(1782715331026)" title="Remove">✕</button></td>
+    </tr></tbody>
           </table>
         </div>
         <div class="action-bar">
@@ -254,7 +274,7 @@ function doGet() {
 // Replace the empty string with your Web App URL
 // Example: 'https://script.google.com/macros/s/ABC.../exec'
 // ═══════════════════════════════════════════════════
-const HARDCODED_GAS_URL = '';
+const HARDCODED_GAS_URL = 'https://script.google.com/macros/s/AKfycbxEo-m6k8fF8yhMa2EJ4Qym4SFoYiyg7leUgNcStC-HG9sJstAIwtu5gyAs8ye88U8n/exec';
 // ═══════════════════════════════════════════════════
 
 const TEAMS = [
@@ -529,5 +549,6 @@ function downloadUpdatedFile() {
   setTimeout(()=>URL.revokeObjectURL(a.href),1000);
 }
 </script>
-</body>
-</html>
+
+
+</body></html>
